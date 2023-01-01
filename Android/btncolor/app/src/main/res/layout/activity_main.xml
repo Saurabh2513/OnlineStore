@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="45dp"
+        android:hint="1"
+        android:background="@drawable/border_color"
+        android:textColor="#131313"
+        android:textSize="50dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+       android:hint="2"
+        android:background="@drawable/border_color"
+        android:layout_marginTop="42.5dp"
+        android:textColor="#131313"
+        android:textSize="50dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="44.5dp"
+       android:hint="3"
+        android:background="@drawable/border_color"
+        android:textColor="#131313"
+        android:textSize="50dp"></TextView>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:hint="enter number"
+        android:background="@drawable/border_color"
+        android:textSize="45dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/button_click"
+        android:gravity="center"
+        android:text="Enter"
+        android:textSize="20dp" />
+
+
+</LinearLayout>

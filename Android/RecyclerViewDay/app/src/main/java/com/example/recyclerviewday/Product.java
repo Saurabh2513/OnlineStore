@@ -1,39 +1,54 @@
 package com.example.recyclerviewday;
 
-public class Product {
-    private int id;
-    private  String txtTitle;
-    private  int price;
-    private  int imgId;
+import java.io.Serializable;
 
-    public Product(int id , String txtTitle,int price,int imgId) {
-        this.id=id;
-        this.txtTitle=txtTitle;
-        this.price=price;
-        this.imgId=imgId;
+public class Product implements Serializable {
+    private int id;
+    private String txtTitle;
+    private int price;
+    private int imageId;
+
+    public Product(int id, String txtTitle, int price, int imageId) {
+        this.id = id;
+        this.txtTitle = txtTitle;
+        this.price = price;
+        this.imageId = imageId;
     }
-    public void setId(int id){
-        this.id=id;
+
+    public void setId(int id) {
+        this.id = id;
     }
-    public int getId(){
-        return  id;
+
+    public int getId() {
+        return id;
     }
-    public void setTxtTitle(String txtTitle){
-        this.txtTitle=txtTitle;
+
+
+    public void setTitle(String txtTitle) {
+        this.txtTitle = txtTitle;
     }
-    public String getTxtTitle(){
-      return txtTitle;
+
+    public String getTitle() {
+        return txtTitle;
     }
-    public  void setPrice(int price){
-        this.price=price;
+
+
+    public void setPrice(int price) {
+        this.price = price;
     }
-    public int getPrice(){
+
+    public int getPrice() {
         return price;
     }
-    public  void setImgId(int imgId){
-        this.imgId=imgId;
+
+
+    public void setImgId(int imgId) {
+        this.imageId = imageId;
     }
-    public int getImgId(){
-        return imgId;
+
+    public int getImgId() {
+        return imageId;
     }
+
+
 }

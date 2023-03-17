@@ -13,28 +13,37 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Product> products;
     RecyclerView recyclerProducts;
     ProductAdapter productAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initview();
-        initPrducts();
-
-
+        initView();
+        initProducts();
     }
 
-    private void initview() {
-        recyclerProducts=findViewById(R.id.recyclerProduct);
+    private void initView() {
+        recyclerProducts = findViewById(R.id.recyclerProduct);
         recyclerProducts.setLayoutManager(new LinearLayoutManager(
                 this,
                 LinearLayoutManager.VERTICAL,
                 false
         ));
-       // productAdapter =new ProductAdapter()(products);
-       // recyclerProducts.setAdapter(productAdapter);
+        productAdapter = new ProductAdapter(products);
+        recyclerProducts.setAdapter(productAdapter);
     }
 
-    private void initPrducts() {
-
+    private void initProducts() {
+        products = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            products.add(
+                    new Product(
+                            i,
+                            "product" + i,
+                            i + 500,
+                            i + 10
+                    )
+            );
+        }
     }
 }

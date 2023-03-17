@@ -31,6 +31,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
             imageProduct.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    Toast.makeText(view.getContext(), "pvh", Toast.LENGTH_SHORT).show();
 
                 }
             });
@@ -71,11 +72,39 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
     @Override
     public void onBindViewHolder(@NonNull ProductAdapter.ProductViewHolder holder, int position) {
+Product product = products.get(position);
 
+ holder.itemView.findViewById(R.id.imageProduct).setOnClickListener(
+         new View.OnClickListener(){
+
+             @Override
+             public void onClick(View v) {
+                 Toast.makeText(v.getContext(),product.getImgId()+"", Toast.LENGTH_SHORT).show();
+             }
+         }
+ );
+        holder.itemView.findViewById(R.id.imageProduct).setOnClickListener(
+                new View.OnClickListener(){
+
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(v.getContext(),product.getImgId()+"", Toast.LENGTH_SHORT).show();
+                    }
+                }
+        );
+        holder.itemView.findViewById(R.id.imageProduct).setOnClickListener(
+                new View.OnClickListener(){
+
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(v.getContext(),product.getImgId()+"", Toast.LENGTH_SHORT).show();
+                    }
+                }
+        );
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return products.size();
     }
 }
